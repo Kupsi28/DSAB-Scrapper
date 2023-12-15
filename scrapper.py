@@ -13,7 +13,7 @@ mycursor = mydb.cursor()
 mycursor.execute("DROP TABLE IF EXISTS rangliste")
 mycursor.execute("CREATE TABLE rangliste (rank INT, team VARCHAR(255), members VARCHAR(255), points VARCHAR(255), games VARCHAR(255), games2 VARCHAR(255), sets VARCHAR(255), sets2 VARCHAR(255))")
 
-url = "https://dsab-vfs.de/VFSProject/WebObjects/VFSProject.woa/wa/rangListen?liga=6022&typ=teamrang&saison=3492"
+url = "https://dsab-vfs.de/VFSProject/WebObjects/VFSProject.woa/wa/rangListen?liga=6022&typ=teamrang&saison=3492" # <-------- add your URL here 
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 
